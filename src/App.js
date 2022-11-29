@@ -3,15 +3,21 @@ import './App.css';
 
 function App() {
   return (
-    <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
-  <div className="shrink-0">
-  </div>
-  <div>
-    <div className="text-xl font-medium text-primary">ChitChat</div>
-    <p className="text-slate-500">You have a new message!</p>
-  </div>
+    <div className="container p-4">
+ <TailwindCSSButton>
+  TailwindCSS
+  </TailwindCSSButton> 
+ 
+ 
 </div>
   );
+}
+
+function TailwindCSSButton(props){
+  return(
+    <a href={props.href} className="bg-blue-500 text-white 
+    font-medium px-4 py-2 rounded hover: bg-blue-600 inline-block">{props.children}</a>
+  )
 }
 
 export default App;
